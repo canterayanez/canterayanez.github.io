@@ -1,0 +1,571 @@
+@font-face {
+    font-family: 'FigtreeBold';
+    src: url('Figtree-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'WatchQuinn';
+    src: url('Watch-Quinn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FigtreeRegular';
+    src: url('Figtree-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'PoppinsBold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'PoppinsRegular';
+    src: url('Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes desLogo {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+nav a:nth-child(1) { animation-delay: 1s; }
+        nav a:nth-child(2) { animation-delay: 1.2s; }
+        nav a:nth-child(3) { animation-delay: 1.4s; }
+        nav a:nth-child(4) { animation-delay: 1.6s; }
+        nav a:nth-child(5) { animation-delay: 1.8s; }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: bisque;
+}
+
+header {
+    position: fixed;
+    width: 94%;
+    background: radial-gradient(circle at right, #0010ED, #000CAD, #000654, #00043A);
+    padding: 20px 30px;
+    border-bottom: 4px solid #6BB3F2;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Sombra en la parte inferior */ 
+    border-bottom-left-radius: 20px;  /* Redondeo en la esquina inferior izquierda */
+    border-bottom-right-radius: 20px;
+    z-index: 10; 
+}
+
+nav {
+    display: flex;
+    overflow: visible;
+    justify-content: space-between; /* Alinea logo a la izquierda y menú a la derecha */
+    align-items: center;
+}
+
+.logo {
+    width: 125px;
+    animation: desLogo 1s ease-out forwards;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Reduce la separación entre los ítems */
+    padding-right: 30px; /* Espacio en el lado derecho */
+}
+
+.nav-links a {
+    opacity: 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'FigtreeBold';
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+nav a:hover{
+    color: #FFE05C;
+}
+
+.swiper {
+    padding-top: 75px;
+    width: 100%;
+    height: 150px; /* Ajusta según necesites */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que las imágenes cubran bien el espacio */
+}
+
+#bienvenida h1{
+    font-family: 'WatchQuinn';
+    font-size: 35px;
+    background: linear-gradient(to right, #717ec4, #1f34a6, #021476); /* Degradado de izquierda a derecha */
+    -webkit-background-clip: text;
+    width: 35%;
+    color: transparent; /* Hace que el color del texto sea transparente */
+    text-align: center;
+}
+
+#bienvenida {
+        display: flex;
+        flex-direction: column; /* Apila los elementos en columna */
+        align-items: center; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente si el contenedor tiene altura definida */
+        text-align: center; /* Asegura que el texto dentro del h1 y p esté centrado */
+        height: 100vh; /* Opcional, ajusta la altura al 100% de la pantalla */
+    padding: 75px;
+    
+}
+
+#bienvenida p{
+    width: 80%;
+}
+
+p{
+    font-family: 'FigtreeRegular';
+    font-size: 16px;
+}
+
+
+video {
+    padding-top: 20px;
+    width: 70%; /* Hace que el video ocupe todo el ancho del contenedor */
+    height: auto; /* Ajusta la altura proporcionalmente */
+}
+
+#servicios {
+    padding: 100px;
+}
+
+h2{
+    font-family: 'WatchQuinn';
+    font-size: 35px;
+    background: linear-gradient(to right, #717ec4, #1f34a6, #021476); /* Degradado de izquierda a derecha */
+    -webkit-background-clip: text;
+    width: 55%;
+    color: transparent; /* Hace que el color del texto sea transparente */
+    text-align: center;
+}
+
+#servicios_descripcion {
+    background-image: url('servicios_fondo.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el div */
+    background-position: center; /* Centrado */
+    background-repeat: no-repeat; /* Evita la repetición */
+    
+    width: 100%; /* Ocupa el 100% del contenedor padre */
+    min-height: 200px; /* Ajusta la altura mínima para evitar que sea demasiado pequeño */
+    height: auto; /* Permite que la altura se ajuste según el contenido */
+    box-sizing: border-box;
+    text-align: justify;
+    
+    padding-right: 40px; /* Espaciado interno */
+    padding-left: 40%; /* Mueve el texto a la izquierda sin afectar el ancho del div */
+    
+    display: flex; /* Opcional: Para mejorar alineación */
+    align-items: center; /* Alinea el texto verticalmente en el div */
+    
+    color: black; /* Asegura visibilidad del texto */
+    border-radius: 30px;
+}
+
+.imagenes_servicios{
+    padding: 100px;
+}  
+
+.separador {
+    width: 100%; /* Ajusta el ancho de la línea */
+    height: 5px; /* Ajusta la altura de la línea */
+    background-color: #021476; /* Color de la línea */
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+.imagenes_slider {
+    width: 100%;
+    height: 400px; /* Altura fija */
+    position: relative;
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Desplazamiento "obligatorio" entre imágenes */
+    scroll-behavior: smooth; /* Movimiento más fluido */
+    gap: 0; /* Elimina espacios entre imágenes */
+    -webkit-overflow-scrolling: touch; /* Mejora en iOS */
+}
+
+.imagenes_slider img {
+    width: 100%; /* La imagen ocupará el 100% del contenedor */
+    height: 100%; /* Ajusta la altura al contenedor */
+    object-fit: cover; /* Cubre todo el área sin distorsión */
+    border-radius: 5px;
+    scroll-snap-align: center; /* Alinea cada imagen en el centro */
+    flex: 0 0 100%; /* Asegura que cada imagen ocupe todo el ancho */
+}
+
+#productos{
+    display: flex;
+        flex-direction: column; /* Apila los elementos en columna */
+        align-items: center; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente si el contenedor tiene altura definida */
+        text-align: center; /* Asegura que el texto dentro del h1 y p esté centrado */
+        height: 100vh; /* Opcional, ajusta la altura al 100% de la pantalla */
+    padding-left: 100px;
+    padding-right: 100px;
+    height: auto;
+  }
+
+  a {
+    text-decoration:  none;
+  }
+
+.contenedor {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    padding: 100px 0;
+    margin-bottom: 50px;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+    gap: 20px; /* Espacio entre los items */
+    justify-content: center; /* Centra los elementos */
+}
+
+.item {
+    position: relative;
+    width: 300px;
+    height: 228px;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #FFF2BF, #FFE05C, #FFD103);
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    opacity: 0.5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    border-radius: 30px;
+    flex-shrink: 0;
+    overflow: hidden; /* ✅ Evita que el video sobresalga */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* ✅ Sombra 3D */
+}
+
+.item video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%; /* ✅ Tamaño ajustado para dejar borde */
+    height: 95%; /* ✅ Tamaño ajustado para dejar borde */
+    object-fit: cover; /* ✅ Asegura que el video cubra el espacio sin deformarse */
+    transform: translate(-50%, -55%); /* ✅ Centrado perfecto */
+    border-radius: 35px; /* ✅ Coincide con el item */
+}
+
+
+/* 📌 Ajustes para que el contenido del item se vea correctamente */
+.contenido-item {
+    position: relative;
+    align-items: center;
+    height: 100%;
+    z-index: 1;
+    color: white;
+    padding: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.689); /* ✅ Mejora legibilidad */
+}
+
+  .item.active {
+      opacity: 1;
+      transform: scale(1.2);
+      z-index: 1;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.463);
+    }
+  
+  
+    .item h3 {
+        width: 100%;
+        font-size: 16px;
+        font-family: 'PoppinsBold';
+        color: #FFE05C;
+        text-align: center;
+    }
+    
+  
+  .item p{
+      width: 100%;
+      height: auto;
+      text-align: justify;
+      font-size: 10px;
+      font-family: 'PoppinsRegular';
+      color: #f0f0f0;
+  }
+  
+  .btn-info{
+      display: inline-block;
+      padding: 13px 55px;
+      border: 1px solid #ffb900;
+      border-radius: 25px;
+      color: #ffb900;
+      text-decoration: none;
+      margin-top: 50px;
+  }
+  
+  button.previo, button.siguiente {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(28, 81, 188, 0.5);
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.817);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+  }
+  
+  button.previo {
+      left: 100px;
+      width: 30px;
+  }
+  
+  button.siguiente {
+      right: 100px;
+      width: 30px;
+  }
+  
+  button.previo:hover, button.siguiente:hover {
+      background-color: rgba(43, 101, 217, 1);
+  }
+
+  #contacto {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+    padding: 100px;
+    height: auto;
+  }
+
+  h4{
+    width: 100%;
+    text-align: right;
+    transform: translateY(-75px);
+    color: rgba(0, 0, 0, 0.817);
+    font-family: 'PoppinsBold';
+  }
+
+  h4:hover{
+    color: #000CAD;
+  }
+
+  .formul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .formulario {
+    background: linear-gradient();
+    width: 75%;
+    background: linear-gradient(45deg, #5A6B8C, #012340);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 200px;
+}
+
+.formulario h3 {
+    font-family: 'WatchQuinn';
+    font-size: 35px;
+    background: linear-gradient(to right, #FFF2BF, #FFE88F,#FFE05C,#FFD92B, #FFD103); /* Degradado de izquierda a derecha */
+    -webkit-background-clip: text;
+    width: 150px;
+    color: transparent;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+.formulario label {
+    font-weight: bold;
+    display: block;
+    font-family: 'FigtreeBold';
+    color: white;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'FigtreeRegular';
+    background: transparent;
+    border: 2px solid yellow;
+    color: yellow;
+}
+
+.formulario textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.formulario button {
+    width: 150px;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    font-family: 'WatchQuinn';
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #218838;
+}
+
+@media (max-width: 768px) {
+
+    header{
+        width: 85%;
+        z-index: 15;
+    }
+
+    .nav-links {
+        display: none; /* Se oculta el menú */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #0010ED;
+        width: 200px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .nav-links a {
+        display: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block; /* Se muestra el botón hamburguesa */
+    }
+
+    #bienvenida h1 {
+        margin-top:  75px;
+        font-size: 35px;
+        width: 80%;
+    }
+
+    #bienvenida{
+        padding: 15px;
+    }
+
+    p {
+        font-size: 13px;
+        text-align: justify;
+        width: 100%;
+    }
+
+    #servicios {
+        padding: 25px;
+    }
+
+    h2 {
+        margin-top: 50px;
+        width: 80%;
+        font-size: 20px;
+    }
+
+    .imagenes_servicios {
+        padding: 25px;
+    }
+
+    .imagenes_slider {
+        height: 200px;
+    }
+
+    #productos {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    #productos h2{
+        font-size: 25px;
+    }
+
+    #contacto {
+        padding: 35px;
+    }
+
+    h4 {
+        font-size: 13px;
+    }
+
+    .formulario h3{
+        font-size: 30px;
+    }
+
+    .formulario input, .formulario textarea {
+        font-size: 12px;
+    }
+
+    .formulario {
+        margin-bottom: 50px;
+    }
+}
+
